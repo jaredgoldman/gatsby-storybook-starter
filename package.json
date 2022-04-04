@@ -11,15 +11,35 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "gatsby": "^4.11.1",
+    "gatsby-plugin-sass": "^5.11.1",
+    "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@babel/core": "^7.17.8",
+    "@storybook/addon-actions": "^6.5.0-alpha.55",
+    "@storybook/addon-essentials": "^6.5.0-alpha.55",
+    "@storybook/addon-interactions": "^6.5.0-alpha.55",
+    "@storybook/addon-links": "^6.5.0-alpha.55",
+    "@storybook/builder-webpack5": "^6.5.0-alpha.55",
+    "@storybook/manager-webpack5": "^6.5.0-alpha.55",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.0-alpha.55",
+    "@storybook/testing-library": "0.0.9",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "prettier": "^2.6.2",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
+    "storybook-addon-gatsby": "0.0.5",
+    "style-loader": "^3.3.1"
   },
   "repository": {
     "type": "git",
