@@ -1,7 +1,7 @@
 
 [build]
 
-  
+  base = "/"
   publish = "storybook-status/"
 
 
