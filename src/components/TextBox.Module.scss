@@ -1,0 +1,47 @@
+.root {
+  position: relative;
+}
+
+.dark {
+  @extend .root;
+  --background-color: #161616;
+  --color: white;
+}
+
+.light {
+  @extend .root;
+  --background-color: wheat;
+  --color: black;
+}
+
+.textBox {
+  height: 50px;
+  width: 200px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #273829;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.button {
+  height: 60px;
+  background-color: var(--background-color);
+  border: none;
+  color: var(--color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #273829;
+  color: white;
+}

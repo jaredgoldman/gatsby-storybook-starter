@@ -6,6 +6,7 @@ module.exports = {
     "@storybook/addon-interactions",
     "storybook-addon-gatsby",
     "@storybook/preset-scss",
+    "storybook-addon-designs",
   ],
   framework: "@storybook/react",
   core: {

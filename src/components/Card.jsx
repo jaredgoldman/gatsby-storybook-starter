@@ -2,9 +2,15 @@ import React from "react"
 import styles from "./Card.module.scss"
 import laptop from "../images/laptop.png"
 
-export default function Card({ title, content, buttonLabel, handleClick }) {
+export default function Card({
+  title,
+  content,
+  buttonLabel,
+  handleClick,
+  theme,
+}) {
   return (
-    <main className={styles.root}>
+    <main className={styles[theme]}>
       <div className={styles.container}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.imageContainer}>

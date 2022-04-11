@@ -1,31 +1,42 @@
 .root {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+// composes applies both style to html element
+// extends adds class it's added to to original class
+// @mixin adds styles to block it's appended to
+
+.light {
+  @extend .root;
+  --background: white;
+  --border-color: black;
+  --font-color: black;
+  --button-background: black;
+  --button-font-color: white;
+}
+
+.dark {
+  @extend .root;
+  --background: black;
+  --border-color: grey;
+  --font-color: white;
+  --button-background: white;
+  --button-font-color: black;
 }
 
 .container {
-  background-color: aliceblue;
+  background-color: var(--background);
+  border-radius: 15px;
+  border: 3px solid var(--border-color);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 3px solid rgb(118, 192, 192);
-  border-radius: 15px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-.title {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 1rem 0;
-  background-color: rgb(236, 236, 255);
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
+  color: var(--font-color);
 }
 
 .imageContainer {
@@ -42,12 +53,6 @@
   }
 }
 
-.content {
-  padding: 1rem;
-  vertical-align: center;
-  margin-top: 1rem;
-}
-
 .buttonContainer {
   display: flex;
   justify-content: center;
@@ -57,27 +62,116 @@
 }
 
 .button {
-  background: linear-gradient(
-    0deg,
-    rgb(185, 181, 255) 0%,
-
-    rgba(0, 212, 255, 1) 100%
-  );
   border-radius: 5px;
   padding: 0.5rem 2rem;
   border: 2px solid aliceblue;
   cursor: pointer;
+  color: var(--button-font-color);
+  background-color: var(--button-background);
 }
 
-.button:hover {
-  background: linear-gradient(
-    0deg,
-    rgb(134, 128, 241) 0%,
+// .light {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: Arial, Helvetica, sans-serif;
 
-    rgba(0, 212, 255, 1) 100%
-  );
-}
+//   .container {
+//     background-color: aliceblue;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     border: 3px solid rgb(118, 192, 192);
+//     border-radius: 15px;
+//     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+//   }
 
-.button:active {
-  border: 2px solid rgb(63, 43, 175);
-}
+//   .title {
+//     width: 100%;
+//     text-align: center;
+//     margin: 0;
+//     margin-bottom: 1rem;
+//     padding: 1rem 0;
+//     background-color: rgb(236, 236, 255);
+//     border-top-right-radius: 12px;
+//     border-top-left-radius: 12px;
+//   }
+
+//   .imageContainer {
+//     height: 7rem;
+//     width: 12rem;
+//     margin-top: 0.5rem;
+//     padding: 1rem;
+//     border-radius: 10px;
+
+//     img {
+//       object-fit: contain;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   .content {
+//     padding: 1rem;
+//     vertical-align: center;
+//     margin-top: 1rem;
+//   }
+
+//   .buttonContainer {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     padding: 1rem;
+//   }
+
+//   .button {
+//     background: linear-gradient(
+//       0deg,
+//       rgb(185, 181, 255) 0%,
+
+//       rgba(0, 212, 255, 1) 100%
+//     );
+//     border-radius: 5px;
+//     padding: 0.5rem 2rem;
+//     border: 2px solid aliceblue;
+//     cursor: pointer;
+//   }
+
+//   .button:hover {
+//     background: linear-gradient(
+//       0deg,
+//       rgb(134, 128, 241) 0%,
+
+//       rgba(0, 212, 255, 1) 100%
+//     );
+//   }
+
+//   .button:active {
+//     border: 2px solid rgb(63, 43, 175);
+//   }
+// }
+
+// .container {
+//   background-color: aliceblue;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   border: 3px solid rgb(118, 192, 192);
+//   border-radius: 15px;
+//   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+// }
+
+// .title {
+//   width: 100%;
+//   text-align: center;
+//   margin: 0;
+//   margin-bottom: 1rem;
+//   padding: 1rem 0;
+//   background-color: rgb(236, 236, 255);
+//   border-top-right-radius: 12px;
+//   border-top-left-radius: 12px;
+// }
