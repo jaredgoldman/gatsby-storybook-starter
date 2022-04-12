@@ -4,6 +4,9 @@ import TextBox from "./TextBox"
 export default {
   component: TextBox,
   title: "Components/TextBox",
+  argTypes: {
+    theme: { options: ["dark", "light"], control: { type: "radio" } },
+  },
 }
 
 const Template = args => <TextBox {...args} />

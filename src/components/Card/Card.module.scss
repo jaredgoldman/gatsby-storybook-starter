@@ -15,17 +15,23 @@
   --background: white;
   --border-color: black;
   --font-color: black;
-  --button-background: black;
-  --button-font-color: white;
+  --button-background: ;
+  --button-font-color: black;
+  --button-border-color: black;
+  --button-hover-bg: black;
+  --button-hover-color: white;
 }
 
 .dark {
   @extend .root;
   --background: black;
-  --border-color: grey;
+  --border-color: white;
   --font-color: white;
-  --button-background: white;
-  --button-font-color: black;
+  --button-background: black;
+  --button-font-color: white;
+  --button-border-color: white;
+  --button-hover-bg: white;
+  --button-hover-color: black;
 }
 
 .container {
@@ -64,10 +70,15 @@
 .button {
   border-radius: 5px;
   padding: 0.5rem 2rem;
-  border: 2px solid aliceblue;
+  border: 2px solid var(--button-border-color);
   cursor: pointer;
   color: var(--button-font-color);
   background-color: var(--button-background);
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
 }
 
 // .light {

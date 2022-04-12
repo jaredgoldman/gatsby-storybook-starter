@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Card.module.scss"
-import laptop from "../images/laptop.png"
+import laptop from "../../images/laptop.png"
 
 export default function Card({
   title,
