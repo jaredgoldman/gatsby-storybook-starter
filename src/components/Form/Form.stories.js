@@ -31,6 +31,7 @@ Login.args = {
       label: "Enter your password",
     },
   ],
+  buttonLabel: "Submit",
 }
 
 export const CoinSelector = Template.bind({})
@@ -59,6 +60,7 @@ CoinSelector.args = {
       ],
     },
   ],
+  buttonLabel: "Buy coin",
 }
 
 export const SignUp = Template.bind({})
@@ -99,6 +101,7 @@ SignUp.args = {
           value: "",
         },
       ],
+      buttonLabel: "Sign up",
     },
   ],
 }

@@ -9,6 +9,7 @@ export default function Form({
   description,
   handleClick,
   variant,
+  buttonLabel,
 }) {
   const formFields = fields.map(field => {
     const { type, label, selectOptions } = field
@@ -70,7 +71,7 @@ export default function Form({
       <form>
         <div className={styles.fields}>{formFields}</div>
         <div className={styles.buttonContainer}>
-          <Button onClick={handleClick}>Submit</Button>
+          <Button onClick={handleClick}>{buttonLabel}</Button>
         </div>
       </form>
     </Box>
